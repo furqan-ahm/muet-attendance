@@ -22,7 +22,7 @@ class AttendanceService extends ChangeNotifier {
     _socket.onConnect((data) {
       notifyListeners();
       //print('ehe');
-      print('connected');
+      
       notifyListeners();
       _socket.on('response', (data) {
         attendanceData=data;

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:muetattendance/services/api_call.dart';
+import 'package:muetattendance/screens/wrapper.dart';
+import 'package:muetattendance/services/attendanceService.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData.dark(),
-        home: const MyHomePage(title: 'Flutter Demo Home Page'),
+        home: const Wrapper(),
       ),
     );
   }
@@ -64,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           floatingActionButton: FloatingActionButton.extended(
             label: const Text('Refresh'),
-            onPressed: prv.getAttendance,
+            onPressed: null,
             tooltip: 'Increment',
           ), // This trailing comma makes auto-formatting nicer for build methods.
         );
